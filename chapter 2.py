@@ -129,3 +129,57 @@ print(output_i)
 # 조합해보기
 output_j = "{:=+5d}".format(52)
 output_k = "{:=+5d}".format(-52)
+output_l = "{:+05d}".format(52)
+output_m = "{:+05d}".format(-52)
+
+print(output_j)
+print(output_k)
+print(output_l)
+print(output_m)
+
+# float 자료형 기본
+output_a = "{:f}".format(52.273)
+output_b = "{:15f}".format(52.273)
+output_c = "{:+15f}".format(52.273)
+output_d = "{:+015f}".format(52.273)
+
+print(output_a)
+print(output_b)
+print(output_c)
+print(output_d)
+
+# 소수점 아래 자릿수 지정하기
+output_a = "{:15.3f}".format(52.273)
+output_b = "{:15.2f}".format(52.273)
+output_c = "{:15.1f}".format(52.273)
+
+print(output_a)
+print(output_b)
+print(output_c)
+
+# 의미없는 소수점 제거하기
+output_a = 52.0
+output_b = "{:g}".format(output_a)
+print(output_a)
+print(output_b)
+print(type(output_b))
+
+# 문자열 양옆의 공백 제거하기
+input_a = """
+    안녕하세요
+문자열의 함수를 알아봅시다
+"""
+print(input_a)
+
+print(input_a.strip())
+
+# 문자열 찾기
+output_a = "안녕안녕하세요".find("안녕")
+print(output_a) # 결과값이 0이 나오는 이유는 문자열에서 안녕의 시작이 문자열의 0번째이기 때문이다.
+
+output_b = "안녕안녕하세요".rfind("안녕")
+print(output_b) # 결과값이 2가 나오는 이유는 문자열을 뒤에서부터 거꾸로 셀 경우 안녕의 시작이 문자열의 2번째이기 때문이다.
+
+# split() 함수
+a = "10 20 30 40 50".split(" ") # split 함수 속에 있는 문자를 기준으로 문자열을 나눈다.
+print(a)

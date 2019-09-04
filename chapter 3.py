@@ -74,7 +74,6 @@ elif 9 <= now.month < 12:
     print("이번 달은 {}월로 가을입니다.".format(now.month))
 
 # 끝자리로 짝수와 홀수 구분
-
 number = input("정수 입력> ")
 last_character = number[-1]
 last_number = int(last_character)
@@ -92,3 +91,55 @@ if last_number == 1 \
     or last_number == 7 \
     or last_number == 9 :
     print("홀수입니다")
+
+# in 문자열 연산자를 이용해서 짝수, 홀수 구분하기
+number = input("정수 입력> ")
+last_character = number[-1]
+
+if last_character in "02468":
+    print("짝수입니다")
+
+if last_character in "13579":
+    print("홀수입니다")
+
+# 나머지 연산자를 활용해서 짝수와 홀수 구분
+number = input("정수 입력> ")
+number = int(number)
+
+if number % 2 == 0:
+    print("짝수입니다")
+
+if number % 2 == 1:
+    print("홀수입니다")
+
+
+# <혼자 공부하는 파이썬> 챕터 3-2
+
+# else 조건문의 활용
+number = input("정수 입력> ")
+number = int(number)
+
+if number % 2 == 0:
+    print("짝수입니다")
+
+else:
+    print("홀수입니다")
+
+# 계절 구하기
+import datetime
+
+now = datetime.datetime.now()
+month = now.month
+
+if 3 <= month <= 5:
+    print("현재는 봄입니다.")
+
+elif 6 <= month <= 8:
+    print("현재는 여름입니다.")
+
+elif 9 <= month <= 11:
+    print("현재는 가을입니다.")
+
+else:
+    print("현재는 겨울입니다.")
+

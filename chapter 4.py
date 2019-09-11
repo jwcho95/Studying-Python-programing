@@ -74,3 +74,14 @@ dictionary["name"] = "8D 건조 망고"
 print("name :", dictionary["name"])
 
 print(dictionary["ingredient"][1]) # 딕셔너리 안에 있는 리스트의 특정 요소도 불러올 수 있다.
+
+# 딕셔너리에 요소 추가하기
+dictionary = {}
+
+print("요소 추가 이전:", dictionary)
+
+dictionary["name"] = "새로운 이름"
+dictionary["head"] = "새로운 정신"
+dictionary["body"] = "새로운 몸"
+
+print("요소 추가 이후:", dictionary)

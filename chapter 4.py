@@ -100,3 +100,28 @@ if key in dictionary:
     print(dictionary[key])
 else:
     print("존재하지 않는 키에 접근하고 있습니다.")
+
+# get()함수를 통하여 존재하지 않는 키 확인하기
+value = dictionary.get("존재하지 않는 키")
+print("값:",value)
+
+if value == None:
+    print("존재하지 않는 키에 접근했었습니다.")
+
+
+# <혼자 공부하는 파이썬> 챕터 4-3
+
+# 리스트와 범위를 조합해서 사용하기
+array = [273, 32, 103, 57, 52]
+
+for i in range(len(array)):
+    print("{}번째 반복: {}".format(i,array[i]))
+
+# 반대로 반복하기
+for i in range(4,0-1,-1):
+    print("현재 반복 변수: {}".format(i))
+
+for i in reversed(range(5)):
+    print("현재 반복 변수: {}".format(i)) # reversed 함수를 이용하면 파이썬이 알아서 뒤집어서 반복문을 돌려준다.
+
+

@@ -125,3 +125,6 @@ for i in reversed(range(5)):
     print("현재 반복 변수: {}".format(i)) # reversed 함수를 이용하면 파이썬이 알아서 뒤집어서 반복문을 돌려준다.
 
 
+# while 반복문
+while True:
+    print(".",end=" ")

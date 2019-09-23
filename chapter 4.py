@@ -126,5 +126,68 @@ for i in reversed(range(5)):
 
 
 # while 반복문
-while True:
-    print(".",end=" ")
+# while True:
+#     print(".",end=" ")
+
+# while 반복문을 for 반복문처럼 사용하기
+i = 0
+while i < 10:
+    print("{}번째 반복입니다.".format(i))
+    i += 1
+
+# 해당하는 값 모두 제거하기
+list_test = [1, 2, 1, 2]
+value = 2
+while value in list_test:
+    list_test.remove(value)
+print(list_test)
+
+# 시간을 기반으로 반복하기
+import time
+
+print(time.time())
+
+# 5초동안 반복하기
+import time
+
+number = 0
+
+target_tick = time.time() + 5
+while time.time() < target_tick:
+    number += 1
+
+print("5초동안 {}번 반복했습니다.".format(number)) # 이 코드는 통신을 할 때 자주 사용하는 코드이니 시간을 기반으로 조건을 걸 때는 while 반복문을 활용한다고 기억해두자.
+
+# break 키워드
+i = 0
+
+while(1):
+    print("{}번째 반복문입니다.".format(i))
+    i += 1
+    input_text = input("> 종료하시겠습니까?(y/n): ")
+    if input_text in ["y", "Y"]:
+        print("반복을 종료합니다.")
+        break
+
+# continue 키워드
+numbers = [5, 15, 6, 20, 7, 25]
+
+for number in numbers:
+    if number < 10:
+        continue
+    print(number)
+
+
+# <혼자 공부하는 파이썬> 챕터 4-4
+
+# reversed() 함수
+list_a = [1, 2, 3, 4, 5]
+list_reversed = reversed(list_a)
+
+print("reversed([1,2,3,4,5]):", list_reversed)
+print("list(reversed[1,2,3,4,5]):", list(list_reversed))
+print()
+
+print("for i in reversed([1, 2, 3, 4, 5]):")
+for i in reversed(list_a):
+    print("-", i)

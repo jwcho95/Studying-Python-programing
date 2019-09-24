@@ -191,3 +191,18 @@ print()
 print("for i in reversed([1, 2, 3, 4, 5]):")
 for i in reversed(list_a):
     print("-", i)
+
+# enumerate() 함수와 리스트
+example_list = ["요소A", "요소B", "요소C"]
+
+print("enumerate() 함수 적용 출력")
+print(enumerate(example_list))
+print()
+
+print("list() 함수로 강제 변환 출력")
+print(list(enumerate(example_list)))
+print()
+
+print("반복문과 조합하기")
+for i,value in enumerate(example_list):
+    print("{}번째 요소는 {}입니다.".format(i, value))

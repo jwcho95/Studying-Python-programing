@@ -24,3 +24,11 @@ def print_n_times(n, *values): # 가변 매개변수는 뒤에 나오는 모든 
         print()
 
 print_n_times(3, "안녕하세요", "즐거운", "파이썬 프로그래밍")
+
+# 기본 매개변수
+
+def print_k_times(value, n=2):
+    for i in range(n):
+        print(value)
+
+print_k_times("안녕하세요")

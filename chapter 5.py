@@ -32,3 +32,12 @@ def print_k_times(value, n=2):
         print(value)
 
 print_k_times("안녕하세요")
+
+# 키워드 매개변수
+def print_l_times(*values, n=2):
+    for i in range(n):
+        for value in values:
+            print(value)
+        print()
+
+print_l_times("안녕하세요", "즐거운", "파이썬 프로그래밍", n=3)

@@ -41,3 +41,15 @@ def print_l_times(*values, n=2):
         print()
 
 print_l_times("안녕하세요", "즐거운", "파이썬 프로그래밍", n=3)
+
+# 여러 함수 호출 형태
+def test(a, b=10, c=100): # 변수 안에 특정한 값을 지정하지 않는다면 함수에 선언된 그 숫자들로 함수가 처리된다.
+    print(a + b + c)
+
+test(10,20,30)
+
+test(a=10, b=100, c=200)
+
+test(c=10, a=100, b=200)
+
+test(10, c=200)

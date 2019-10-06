@@ -53,3 +53,11 @@ test(a=10, b=100, c=200)
 test(c=10, a=100, b=200)
 
 test(10, c=200)
+
+# 아무 자료 없이 리턴하기
+def return_test():
+    print("A 위치입니다.")
+    return # 함수를 종료하라는 의미를 담고 있기도 하다.
+    print("B 위치입니다.")
+
+return_test()

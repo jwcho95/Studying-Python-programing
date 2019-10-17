@@ -61,3 +61,11 @@ def return_test():
     print("B 위치입니다.")
 
 return_test()
+
+# 자료와 함께 리턴하기
+
+def return_test():
+    return 100
+
+value = return_test()
+print(value)

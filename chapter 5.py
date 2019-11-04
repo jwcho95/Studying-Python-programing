@@ -69,3 +69,34 @@ def return_test():
 
 value = return_test()
 print(value)
+
+# 범위 내부의 정수를 모두 더하는 함수
+def sum_all(start, end):
+    output = 0
+    for i in range(start, end+1):
+        output += i
+    return output
+
+print("0 to 100:", sum_all(0,100))
+
+# <혼자 공부하는 파이썬> 챕터 5-2
+
+# 재귀함수를 이용하여 팩토리얼 구하기, 재귀함수란 나 자신을 호출하는 것을 말한다.
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+print("5!:", factorial(5))
+
+# 피보나치 수열을 재귀함수로 구현하기
+def fibonacci(n):
+    if n == 1:
+        return 1
+    if n == 2:
+        return 1
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+print("fibonacci(5):", fibonacci(5))

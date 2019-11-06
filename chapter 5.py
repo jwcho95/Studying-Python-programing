@@ -100,3 +100,20 @@ def fibonacci(n):
         return fibonacci(n-1) + fibonacci(n-2)
 
 print("fibonacci(5):", fibonacci(5))
+
+# 메모화 : 딕셔너리를 사용하여 한번 계산한 값을 저장하는 것을 메모라고 하는데 이를 이용하면 재귀함수도 매우 빠르게 계산할 수 있다.
+dictionary = {
+    1: 1,
+    2: 1,
+}
+
+def fibonacci_1(n):
+    if n in dictionary:
+        return dictionary[n]
+    else:
+        output = fibonacci_1(n-1) + fibonacci_1(n-2)
+        dictionary[n] = output
+        return output
+
+print("fibonacci(35):", fibonacci(35))
+print("fibonacci_1(35):", fibonacci_1(35))

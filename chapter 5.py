@@ -117,3 +117,31 @@ def fibonacci_1(n):
 
 print("fibonacci(35):", fibonacci(35))
 print("fibonacci_1(35):", fibonacci_1(35))
+
+# <혼자 공부하는 파이썬> 챕터 5-3
+
+# 튜플의 특이한 사용, 튜플은 따로 괄호를 사용하지 않아도 파이썬은 튜플로 인식할 수 있다.
+tuple_test = 10,20,30,40
+print("tuple_test:", tuple_test)
+print(type(tuple_test))
+print()
+
+a, b, c = 10, 20, 30
+print("a:", a)
+print("b:", b)
+print("c:", c)
+
+# 변수의 값을 교환하는 튜플, 자주 사용되는 방식이니 기억해두는 것이 좋다.
+a, b = 10, 20
+print(a, b)
+
+a, b = b, a
+print(a, b)
+
+# 여러 개의 값을 리턴하기, 괄호 없이 할당할 수 있는 것은 튜플만이 가능한 일이니 튜플이랑 같이 기억해두는 것이 좋다.
+def test():
+    return (10, 20)
+
+a, b = test()
+print("a:", a)
+print("b:", b)

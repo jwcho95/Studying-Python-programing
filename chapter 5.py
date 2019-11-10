@@ -115,8 +115,9 @@ def fibonacci_1(n):
         dictionary[n] = output
         return output
 
-print("fibonacci(35):", fibonacci(35))
+# print("fibonacci(35):", fibonacci(35))
 print("fibonacci_1(35):", fibonacci_1(35))
+
 
 # <혼자 공부하는 파이썬> 챕터 5-3
 
@@ -155,3 +156,19 @@ def print_hello():
     print("안녕하세요")
 
 call_10_times(print_hello)
+
+# map() 함수와 filter()함수
+def power(item):
+    return item * item
+def under_3(item):
+    return item < 3
+
+list_input_a = [1,2,3,4,5]
+
+output_a = map(power, list_input_a)
+print("map(power, list_input_a):", list(output_a)) # map 함수는 리스트의 요소를 함수에 넣고 리턴된 값으로 새로운 리스트를 만들어주는 함수이다.
+print()
+
+output_b = filter(under_3, list_input_a)
+print("filter(under_3, list_input_a):", list(output_b)) # filter 함수는 리스트의 요소를 함수에 넣고 그 중 참인 값으로 새로운 리스트를 만들어주는 함수이다.
+print()

@@ -172,3 +172,24 @@ print()
 output_b = filter(under_3, list_input_a)
 print("filter(under_3, list_input_a):", list(output_b)) # filter 함수는 리스트의 요소를 함수에 넣고 그 중 참인 값으로 새로운 리스트를 만들어주는 함수이다.
 print()
+
+# lambda는 함수를 매우 쉽게 선언할 수 있다. 파이썬에 있는 대표적인 기능 중 하나이며 간단한 함수를 선언할 때 자주 이용된다.
+
+# 이 함수를 람다를 사용하면 다음과 같이 표현된다.
+# def power(item):
+#     return item * item
+# def under_3(item):
+#     return item < 3
+
+power = lambda x : x * x
+under_3 = lambda x : x < 3
+
+list_input_a = [1,2,3,4,5]
+
+output_a = map(power, list_input_a) # 위에서 람다로 함수를 미리 선언하지 않고 power의 위치, 즉, 매개변수에 람다를 넣을 수 있다.
+print("map(power, list_input_a):", list(output_a))
+print()
+
+output_b = filter(under_3, list_input_a)
+print("filter(under_3, list_input_a):", list(output_b))
+print()

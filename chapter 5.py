@@ -193,3 +193,15 @@ print()
 output_b = filter(under_3, list_input_a)
 print("filter(under_3, list_input_a):", list(output_b))
 print()
+
+# 제너레이터 함수 : 이터레이터를 만드는 함수이다. 쉽게 나눠서 yield와 next를 이용하여 함수를 yield에 따라 구분하여 나눠서 사용할 수 있다는 것이다.
+def test():
+    print("함수가 호출되었습니다")
+    yield "test"
+
+print("A 지점 통과")
+test()
+
+print("B 지점 통과")
+test()
+print(test())

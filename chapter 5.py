@@ -205,3 +205,24 @@ test()
 print("B 지점 통과")
 test()
 print(test())
+print()
+
+# 제너레이어 객체와 next()함수
+def test1():
+    print("A 지점 통과")
+    yield 1
+    print("B 지점 통과")
+    yield 2
+    print("C 지점 통과")
+
+output = test1()
+
+print("D 지점 통과")
+a = next(output) # next 함수는 함수 속 yield 위에까지 실행하고 yield 뒤에 나온 값을 반환한다.
+print(a)
+
+print("E 지점 통과")
+b = next(output)
+print(b)
+
+# next(output) 함수의 범위를 벗어나면 오류가 생기게 된다. 여기서는 C 지점 통과까지 나오고 오류가 생긴다.

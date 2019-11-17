@@ -30,3 +30,40 @@ try:
     print("원의 넓이:", 3.14 * number_input_b * number_input_b)
 except:
     print("무언가 잘못되었습니다.")
+
+# try, except 구문과 pass 키워드 조합하기 (숫자로 변환되는 것들만 리스트에 넣기) : try, except 구문은 if 구문을 활용하는 코드보다 약간 느리다.
+list_input_a = ["52", "273", "32", "스파이", "103"]
+
+list_number = []
+for item in list_input_a:
+    try:
+        float(item)
+        list_number.append(item)
+    except:
+        pass
+
+print("{} 내부에 있는 숫자는".format(list_input_a))
+print("{} 입니다.".format(list_number))
+
+# try except else 구문 : 예외가 발생할 것 같은 구문을 try 안에 넣고 예외가 발생하지 않았을 경우 실행할 코드를 else 구문에 넣는 방식이다. 이런 방식은 파이썬이나 루비에서 볼 수 있다.
+try:
+    number_input_a = int(input("정수 입력> "))
+except:
+    print("정수를 입력하지 않았습니다.")
+else:
+    print("원의 반지름:", number_input_a)
+    print("원의 둘레:", 2 * 3.14 * number_input_a)
+    print("원의 넓이:", 3.14 * number_input_a * number_input_a)
+
+# finally 구문 : 예외가 발생하든 안하든 무조건적으로 실행하는 코드이다. 강제 실행 코드라고 생각하면 편하다.
+try:
+    number_input_a = int(input("정수 입력> "))
+    print("원의 반지름:", number_input_a)
+    print("원의 둘레:", 2 * 3.14 * number_input_a)
+    print("원의 넓이:", 3.14 * number_input_a * number_input_a)
+except:
+    print("정수를 입력하지 않았습니다.")
+else:
+    print("예외가 발생하지 않았습니다.")
+finally:
+    print("일단 프로그램이 어떻게든 끝났습니다.")

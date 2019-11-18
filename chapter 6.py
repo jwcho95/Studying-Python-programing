@@ -67,3 +67,39 @@ else:
     print("예외가 발생하지 않았습니다.")
 finally:
     print("일단 프로그램이 어떻게든 끝났습니다.")
+
+# 파일이 제대로 닫혔는지 확인하기
+try:
+    file = open("info.txt", "w")
+    file.close()
+
+except Exception as e: # 예외를 예외변수에 넣어 출력하도록 하는 방법이다.
+    print(e)
+
+print("file.closed:", file.closed)
+print()
+
+# 파일 처리 중간에 예외 발생
+try:
+    file = open("info.txt", "w")
+    예외.발생해라()
+    file.close()
+
+except Exception as e: # 예외가 예외변수 e에 저장되었기 때문에 어떤 예외가 발생했는지 출력하도록 할 수 있다.
+    print(e)
+
+print("file.closed:", file.closed)
+print()
+
+# finally 구문 사용해 파일 닫기
+try:
+    file = open("info.txt", "w")
+    예외.발생해라()
+
+except Exception as e:
+    print(e)
+
+finally: # 여기서는 굳이 finally 구문을 이용한 후 파일을 닫았지만 이거 없이 try, except 구문이 모두 끝난 후 파일을 닫아도 된다.
+    file.close()
+
+print("file.closed:", file.closed)

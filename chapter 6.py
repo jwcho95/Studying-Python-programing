@@ -103,3 +103,38 @@ finally: # 여기서는 굳이 finally 구문을 이용한 후 파일을 닫았�
     file.close()
 
 print("file.closed:", file.closed)
+print()
+
+# try 구문 내부에서 return 키워드를 사용하는 경우
+def test():
+    print("test() 함수의 첫줄 입니다.")
+    try:
+        print("try 구문이 실행되었습니다.")
+        return # 반환을 하는 순간 이 함수는 종료된다. 그렇기 때문에 try 구문이 다 실행되지도 else 구문이 실행되지도 않는다.
+        print("try 구문의 return 키워드 뒤입니다.")
+    except:
+        print("except 구문이 실행되었습니다.")
+    else:
+        print("else 구문이 실행되었습니다.")
+    finally: # 그러나 finally 구문은 다르다. 이것은 함수가 종료된다고 하더라도 실행이 된다. 이것이 굉장한 것이다.
+        print("finally 구문이 실행되었습니다.")
+    print("test() 함수의 마지막 줄입니다.")
+
+test()
+print()
+
+# 반복문과 함께 사용하는 경우
+print("프로그램이 시작되었습니다.")
+
+while(1):
+    try:
+        print("try 구문이 실행되었습니다.")
+        break
+        print("try 구문의 break 키워드 뒤입니다.")
+    except:
+        print("except 구문이 실행되었습니다.")
+    finally: # break 키워드로 try 구문 전체를 빠져나가도 finally 구문이 실행된다.
+        print("finally 구문이 실행되었습니다.")
+    print("while 반복문의 마지막 줄입니다.")
+
+print("프로그램이 종료되었습니다.")

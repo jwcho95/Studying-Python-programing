@@ -138,3 +138,14 @@ while(1):
     print("while 반복문의 마지막 줄입니다.")
 
 print("프로그램이 종료되었습니다.")
+print()
+
+# 예외 객체 (Exception) : Exception은 클래스이다. 이것으로 예외의 종류를 알 수 있다.
+try:
+    number_input_a = int(input("정수 입력> "))
+    print("원의 반지름:", number_input_a)
+    print("원의 둘레:", 2 * 3.14 * number_input_a)
+    print("원의 넓이:", 3.14 * number_input_a * number_input_a)
+except Exception as exception:
+    print('type(exception):' , type(exception))
+    print("exception: ", exception)

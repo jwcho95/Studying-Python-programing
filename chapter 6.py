@@ -171,3 +171,17 @@ except ValueError: # ValueError가 발생했을 때 아래의 구문이 실행�
     print("정수를 입력해주세요.")
 except IndexError: # ValueError와 마찬가지로 다음과 같은 오류가 발생하면 아래의 구문이 실행된다.
     print("리스트의 인덱스를 벗어났어요!")
+print()
+
+# 예외 구문과 예외 객체
+list_number = [52, 273, 32, 72, 100]
+
+try:
+    number_input = int(input("정수 입력: "))
+    print("{}번째 요소: {}".format(number_input, list_number[number_input]))
+except ValueError as exception: # 예외 구문 뒤에 예외 객체를 추가해도 제대로 작동한다.
+    print("정수를 입력해주세요.")
+    print("exception:", exception)
+except IndexError as exception:
+    print("리스트의 인덱스를 벗어났어요!")
+    print("exception:", exception)

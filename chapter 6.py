@@ -185,3 +185,21 @@ except ValueError as exception: # 예외 구문 뒤에 예외 객체를 추가�
 except IndexError as exception:
     print("리스트의 인덱스를 벗어났어요!")
     print("exception:", exception)
+print()
+
+# 모든 예외 잡기
+list_number = [52, 273, 32, 72, 100]
+
+try:
+    number_input = int(input("정수 입력: "))
+    print("{}번째 요소: {}".format(number_input, list_number[number_input]))
+    예외.발생() # 강제적으로 예외를 발생시킨다.
+except ValueError as exception:
+    print("정수를 입력해주세요.")
+    print("exception:", exception)
+except IndexError as exception:
+    print("리스트의 인덱스를 벗어났어요!")
+    print("exception:", exception)
+except Exception as exception: # 이 구문이 존재하지 않는다면 위에 작성된 코드는 오류가 나서 작동을 멈출 것이다.
+    print("미리 파악하지 못한 예외가 발생하였습니다.")
+    print(type(exception), exception)

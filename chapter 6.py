@@ -203,3 +203,9 @@ except IndexError as exception:
 except Exception as exception: # 이 구문이 존재하지 않는다면 위에 작성된 코드는 오류가 나서 작동을 멈출 것이다.
     print("미리 파악하지 못한 예외가 발생하였습니다.")
     print(type(exception), exception)
+
+# raise 구문
+# 프로그램이 강제적으로 종료되는 것을 막기 위해서는 필히 예외를 처리해야하나 일부러 강제종료를 시키는 경우도 있다.
+# 구현되지 못한 부분이나 꼭 한번 더 확인해야하는 구간에 raise 구문을 이용해 강제적으로 오류를 일으킬 수 있다.
+# raise + 예외 객체
+# raise 뒤에 예외 이름을 입력하면 오류가 발생한다.
